@@ -1,0 +1,118 @@
+name: Build and publish HTML and PDF documentation
+
+on:
+  release:
+    types:
+      created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        # checkout specific branch
+        ref: main
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.12
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Build documentation
+      run: |
+        make html
+        make latex
+
+    - name: Upload HTML to artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: html
+        path: build/html
+
+    - name: Compile PDF
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: xtdc4userguide.tex
+        latexmk_use_lualatex: true
+        working_directory: build/latex
+        # pre_compile: "tlmgr update --self && tlmgr update --all"
+
+    - name: Upload log if latexmk fails
+      if: ${{ failure() }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: latex_files
+        path: |
+          build/latex/*
+
+    - name: Rename latex file
+      run: |
+        mv build/latex/xtdc4userguide.pdf build/latex/xTDC4_User_Guide.pdf
+
+    - name: Upload LaTeX to artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: latex
+        path: build/latex
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        # checkout specific branch
+        ref: main
+
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: ./artifacts
+
+    - name: Publish HTML
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY }}
+        source: ./artifacts/html/*
+        target: ${{ secrets.TARGETHTML }}
+        strip_components: 2
+        rm: true
+
+    - name: Publish PDF
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY }}
+        source: ./artifacts/latex/xTDC4_User_Guide.pdf
+        target: ${{ secrets.TARGETPDF }}
+        strip_components: 3
+        rm: true
+
+    - name: zip documentation
+      run: |
+        mkdir documentation
+        mv ./artifacts/html ./documentation/html
+        mv ./artifacts/latex/xTDC4_User_Guide.pdf ./documentation/xTDC4_User_Guide.pdf
+        (cd documentation && zip -r ../documentation.zip .)
+
+    - name: Upload documentation as release asset
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        gh release upload ${{ github.event.release.tag_name }} ./documentation.zip
+
