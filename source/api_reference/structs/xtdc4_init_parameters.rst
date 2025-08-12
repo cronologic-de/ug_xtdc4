@@ -40,9 +40,11 @@
 
     .. c:member:: uint64_t buffer_size[8]
 
-        The minimum size of the DMA buffer.
+        The minimum size of the DMA buffer in bytes.
 
-        If set to 0, the default size of 16 MB is used.
+        Defaults to 4 :math:`\times` 1024 :math:`\times` 1024 bytes.
+
+        The minimal possible size is 1024 :math:`\times` 1024 bytes.
 
         For the xTDC4, only the first entry is used.
 
