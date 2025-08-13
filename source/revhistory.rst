@@ -108,7 +108,7 @@ User Guide
 ==========
 
 2.0.1-dev – TBD
-    - Various clarifications in API
+    - Various clarifications and corrections in API
 
 2.0.0 – 2025-08-01
     - Initial Release of the HTML User Guide

@@ -210,20 +210,29 @@ xtdc4_read_out
 
         .. c:macro:: CRONO_READ_OK
 
-            ``0``. Read was successful. No errors occurred.
+            Evaluates to ``0``. Read was successful. No errors occurred.
 
         .. c:macro:: CRONO_READ_NO_DATA
 
-            ``1``. The read attempt did not yield any data.
+            Evaluates to ``1``. The read attempt did not yield any data.
 
         .. c:macro:: CRONO_READ_INTERNAL_ERROR
 
-            ``2``. Some unhandled error occurred. The xTDC4 device needs to be
-            reinitialized.
+            Evaluates to ``2``. Some unhandled error occurred.
+            The xTDC4 device needs to be reinitialized.
         
         .. c:macro:: CRONO_READ_TIMEOUT
 
-            ``3``. Attempt to read packets did not yield data in the given time.
+            Evaluates to ``3``. This error code is currently not used.
+
+        .. c:macro:: CRONO_READ_WRONG_STATE
+
+            Evaluates to ``4``. The xTDC4 is in a wrong state
+            (see :ref:`sec runtime control`).
+
+        .. c:macro:: CRONO_READ_INVALID_ARGUMENTS
+
+            Evaluates to ``5``.
 
     .. c:member:: const char* error_message
 
