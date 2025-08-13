@@ -216,6 +216,10 @@ xtdc4_read_out
 
             Evaluates to ``1``. The read attempt did not yield any data.
 
+            The pointers :c:member:`xtdc4_read_out.first_packet` and
+            :c:member:`xtdc4_read_out.last_packet` will not point to valid packets
+            in memory.
+
         .. c:macro:: CRONO_READ_INTERNAL_ERROR
 
             Evaluates to ``2``. Some unhandled error occurred.
