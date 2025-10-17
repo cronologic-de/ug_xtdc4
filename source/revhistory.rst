@@ -107,10 +107,11 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.1-dev – TBD
+2.0.1 – 2025-10-17
     - Various clarifications and corrections in API
     - Fixed value for maximum possible PCIe throughput
     - Added physical dimensions
+    - Fixed title page
 
 2.0.0 – 2025-08-01
     - Initial Release of the HTML User Guide
