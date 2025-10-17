@@ -6,6 +6,16 @@ Each board is tested against the values listed in the columns “Min” and “M
 “Typical” (Typ.) is the mean value of the first 10 boards produced or a value that is
 set by design.
 
+
+Dimension
+=========
+
+The xTDC4 boards fit any standard full-height PCIe slot and occupy a single
+slot width.
+
+The dimensions, excluding the slot bracket,
+are **167.7 × 111.15 × 16.8 mm** (depths × height × width).
+
 TDC Characteristics
 ===================
 
