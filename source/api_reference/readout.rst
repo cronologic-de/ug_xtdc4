@@ -118,11 +118,11 @@ xtdc4_read
 
 
 xtdc4_acknowledge
-=======================
+=================
 
 .. c:function:: int xtdc4_acknowledge(\
     xtdc4_device *device,\
-    crono_packet *packet)
+    volatile crono_packet *packet)
 
     Acknowledge all packets up to ``packet``.
 
