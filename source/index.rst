@@ -47,7 +47,7 @@ range are grouped into one packet.
 - L0 FIFO: 15 words/channel
 - L1 FIFO: 512 words/channel
 - L2 FIFO: 8000 words
-- PCIe 1.1 x1 with 200 MB/s throughput
+- PCIe 1.1 x1 with 400 MB/s throughput
 
 
 .. only:: html

@@ -109,6 +109,7 @@ User Guide
 
 2.0.1-dev – TBD
     - Various clarifications and corrections in API
+    - Fixed value for maximum possible PCIe throughput
 
 2.0.0 – 2025-08-01
     - Initial Release of the HTML User Guide
