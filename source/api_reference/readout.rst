@@ -67,7 +67,7 @@ or in Section :ref:`sec code example`.
 Memory Management
 =================
 
-The xTDC4 internal FIFOs (first-in, first-out) that buffer data during
+The xTDC4 has internal FIFOs (first-in, first-out) that buffer data during
 acquisition.
 
 The data is streamed from the FIFO to the
