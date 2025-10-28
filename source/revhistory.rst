@@ -109,6 +109,7 @@ User Guide
 
 2.0.2-dev – TBD
     - Updated :numref:`fig board overview`
+    - Updated Technical Data
 
 2.0.1 – 2025-10-17
     - Various clarifications and corrections in API
