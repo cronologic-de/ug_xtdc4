@@ -107,6 +107,9 @@ Driver & Applications
 User Guide
 ==========
 
+2.0.2-dev – TBD
+    - Updated :numref:`fig board overview`
+
 2.0.1 – 2025-10-17
     - Various clarifications and corrections in API
     - Fixed value for maximum possible PCIe throughput
