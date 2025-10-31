@@ -6,6 +6,16 @@ Each board is tested against the values listed in the columns “Min” and “M
 “Typical” (Typ.) is the mean value of the first 10 boards produced or a value that is
 set by design.
 
+
+Dimension
+=========
+
+The xTDC4 boards fit any standard full-height PCIe slot and occupy a single
+slot width.
+
+The dimensions, excluding the slot bracket,
+are **167.7 × 111.15 × 16.8 mm** (depths × height × width).
+
 TDC Characteristics
 ===================
 
@@ -19,7 +29,7 @@ TDC Characteristics
     +====================+============================================+=====+====================+==================+=========+
     | INL                | Integral non-linearity                     |     |                    | 1                | bins    |
     +--------------------+--------------------------------------------+-----+--------------------+------------------+---------+
-    | DNL                | Differential non-linearity                 |     |                    | 0.5              | bins    |
+    | DNL                | Differential non-linearity                 |     | 0.25               | 0.5              | bins    |
     +--------------------+--------------------------------------------+-----+--------------------+------------------+---------+
     | t\ :sub:`Data`     | Data bin size                              |     |5000/384 ≈ 13.02083 |                  | ps      |
     +--------------------+--------------------------------------------+-----+--------------------+------------------+---------+
@@ -145,7 +155,7 @@ term is called duty cycle).
     +--------------------+-------------------------------------+-----------------------+---------+-----------------------+-------+
     | Symbol             | Parameter                           | Min                   | Typ.    | Max                   | Units |
     +====================+=====================================+=======================+=========+=======================+=======+
-    | V\ :sub:`Base`     | Input Baseline                      | 0                     |         | 5                     | V     |
+    | V\ :sub:`Base`     | Input Baseline\ :sup:`1`            | –5                    |         | 5                     | V     |
     +--------------------+-------------------------------------+-----------------------+---------+-----------------------+-------+
     | V\ :sub:`Threshold`| Trigger Level                       | V\ :sub:`Base` – 1.27 |         | V\ :sub:`Base` + 1.13 | V     |
     +--------------------+-------------------------------------+-----------------------+---------+-----------------------+-------+
@@ -161,6 +171,8 @@ term is called duty cycle).
     +--------------------+-------------------------------------+-----------------------+---------+-----------------------+-------+
     | I\ :sub:`Term`     | Termination Current                 | –50                   | –20     | 50                    | mA    |
     +--------------------+-------------------------------------+-----------------------+---------+-----------------------+-------+
+
+:sup:`1` Be wary that the total input voltage (baseline + pulse) does not exceed ±5 V!
 
 
 Information Required by DIN EN 61010-1

@@ -67,7 +67,7 @@ or in Section :ref:`sec code example`.
 Memory Management
 =================
 
-The xTDC4 internal FIFOs (first-in, first-out) that buffer data during
+The xTDC4 has internal FIFOs (first-in, first-out) that buffer data during
 acquisition.
 
 The data is streamed from the FIFO to the
@@ -118,11 +118,11 @@ xtdc4_read
 
 
 xtdc4_acknowledge
-=======================
+=================
 
 .. c:function:: int xtdc4_acknowledge(\
     xtdc4_device *device,\
-    crono_packet *packet)
+    volatile crono_packet *packet)
 
     Acknowledge all packets up to ``packet``.
 

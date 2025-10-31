@@ -106,7 +106,7 @@ latex_elements = {
     """,
     "extraclassoptions": r"openany",
     "tableofcontents": r"\tableofcontents",
-    "maketitle": r"\includepdf[pages={1}]{TT4_title.pdf}",
+    "maketitle": r"\includepdf[pages={1}]{XTDC4_title.pdf}",
     "releasename": "Rev.",
     "makeindex": "",
     "printindex": "",
@@ -115,5 +115,5 @@ latex_theme = "manual"  # manual (book class) or howto (article class)
 latex_additional_files = [
     "cronologicug.sty",
     "extraplaceins.sty",
-    "TT4_title.pdf",
+    "XTDC4_title.pdf",
 ]
