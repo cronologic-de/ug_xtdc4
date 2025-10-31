@@ -69,13 +69,15 @@ Oscillator Time Base
 | :sup:`1`\ Over –40°C to 85°C; relative to stabilized frequency after 1 hour of continuous operation
 | :sup:`2`\ @ 25°C; within ±100 ppb of F, where F is the stabilized frequency reached after 1 hour of continuous operation
 
+.. _sec cable delay test:
 
 Cable Delay Test
 ----------------
 
-To determine the total RMS jitter of the boards, a cable delay test is performed.
-A constant delay is measured multiple times, filling a histogram
-(see :numref:`fig cable delay`).
+:numref:`fig cable delay` shows example histograms resulting from a cable
+delay test, in which a constant delay is measured multiple times.
+From these histograms it is apparent that the largest contribution to the timing error
+is due to the quantization into 13 ps large bins.
 
 .. figure:: _figures/cable_delay_hist.*
     :name: fig cable delay
