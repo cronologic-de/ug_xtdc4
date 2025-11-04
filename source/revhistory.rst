@@ -111,7 +111,7 @@ User Guide
     - Updated :numref:`fig board overview`
     - Updated :doc:`technical_data`
     - Added :ref:`sec cable delay test`
-    - Added 10 MHz external clock SMA connector :numref:`fig schematic`
+    - Added 10 MHz external clock SMA connector to :numref:`fig schematic`
 
 2.0.1 – 2025-10-17
     - Various clarifications and corrections in API
