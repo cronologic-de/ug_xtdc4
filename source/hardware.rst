@@ -62,7 +62,11 @@ The connectors can also be used as outputs. DC-coupled output pulses for automat
 internal triggering and control of external devices can be generated using the
 :ref:`sec tiger`.
 
-Only Gen 1 xTDC4 boards have inter-board connectors near the top edge of the 
+The SMA connector at the top edge of the board can be used to connect an external
+10 MHz clock signal. To enable use of an external clock, configure
+:c:member:`xtdc4_init_parameters.use_ext_clock` accordingly.
+
+**Only Gen 1 xTDC4 boards** have inter-board connectors near the top edge of the 
 board. The pinout of connector J12 is shown in :numref:`table j12 pinout`. The
 connector J12 is reserved for future use.
 
