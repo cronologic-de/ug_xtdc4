@@ -57,6 +57,7 @@ range are grouped into one packet.
 
 .. raw:: latex
 
+    \clearpage
     \phantomsection
     \addcontentsline{toc}{section}{Applications}
     \section*{Applications}
