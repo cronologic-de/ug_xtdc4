@@ -107,6 +107,9 @@ Driver & Applications
 User Guide
 ==========
 
+2.0.3 – TBD
+    - Updated :numref:`fig schematic`
+
 2.0.2 – 2025-11-04
     - Updated :numref:`fig board overview`
     - Updated :doc:`technical_data`
