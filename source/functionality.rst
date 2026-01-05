@@ -134,6 +134,17 @@ respectively.
 
 The trigger can be used as a source for the TiGer unit [see :ref:`sec tiger`].
 
+.. attention::
+
+    When using the Auto-Triggering Function Generator as a Start trigger while measuring
+    asynchronous signals (relative to the Auto Trigger) on the Stop channels, a significant
+    number of low-resolution Stops may be recorded (see :ref:`sec difficult hits`).
+
+    If such functionality is necessary, using the
+    `xHPTDC8 <https://www.cronologic.de/product/xhptdc8-pcie>`__ instead
+    (which can produce a continuous stream of timestamps) alleviates
+    this problem.
+
 
 .. _sec tiger:
 
