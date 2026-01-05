@@ -11,7 +11,7 @@ Detection of rising and falling edges of the stop channels A–D can be enabled
 individually.
 Throughout this User Guide, transitions of the input signals are called **hits**.
 
-The timestampls are quantized and are recorded in integer multiples of the 
+The timestamps are quantized and are recorded in integer multiples of the 
 data bin size of 5 ns / (3 × 128) ≈ 13.02083 ps.
 
 The standard deviation of the timestamps is approximately 8 ps.
