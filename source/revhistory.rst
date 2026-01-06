@@ -107,7 +107,7 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.3 – TBD
+2.0.3 – 2026-01-06
     - Updated :numref:`fig schematic`
     - Updated :ref:`sec auto trigger`
 
