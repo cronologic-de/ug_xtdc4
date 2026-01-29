@@ -106,6 +106,8 @@ Driver & Applications
 
 User Guide
 ==========
+2.0.4 – 2026-01-29
+    - Corrected utilized PCIe generation
 
 2.0.3 – 2026-01-06
     - Updated :numref:`fig schematic`
