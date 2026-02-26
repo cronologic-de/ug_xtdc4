@@ -1,9 +1,11 @@
-import atompy as ap
+import mplutils as mplu
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.axes import Axes
 
 HIT_WIDTH = 1.0
+
+MM_PER_INCH = 25.4
 
 XLIM = 12
 YLIM = 4
@@ -30,7 +32,6 @@ def add_square_pulse(
     x_new = x
     y_new = y
     for position in positions:
-        # Create the x and y coordinates for the square pulse
         x_pulse = [
             position,
             position,
@@ -39,16 +40,13 @@ def add_square_pulse(
         ]
         y_pulse = np.array((y[0], y[0] - height, y[0] - height, y[0]))
 
-        # Insert the pulse into the original line
-        insert_index = np.searchsorted(
-            x_new, x_pulse[0]
-        )  # Find where to insert the pulse
+        insert_index = np.searchsorted(x_new, x_pulse[0])
 
         x_new = list(x_new)
-        x_new[insert_index:insert_index] = x_pulse  # Insert x values
+        x_new[insert_index:insert_index] = x_pulse
 
         y_new = list(y_new)
-        y_new[insert_index:insert_index] = list(y_pulse)  # Insert y values
+        y_new[insert_index:insert_index] = list(y_pulse)
 
     return x_new, y_new
 
@@ -110,8 +108,6 @@ def plot_stopA(ax: Axes):
     x, y = add_square_pulse(x, y, (-8, -4, 2, 5))
     ax.plot(x, y, lw=1.3, color=blue)
 
-    # for xpos in (-8, 5):
-    #     add_rectangle(ax, xpos, grey, height=-0.3, ypos=4)
     for xpos in (-4, 2):
         add_rectangle(ax, xpos, orange, height=-0.3, ypos=4)
 
@@ -132,8 +128,6 @@ def plot_stopC(ax: Axes):
     x, y = add_square_pulse(x, y, (-7, -2, 3, 6))
     ax.plot(x, y, lw=1.3, color=blue)
 
-    # for xpos in (-7, -2):
-    #     add_rectangle(ax, xpos, grey, height=-0.3, ypos=2)
     for xpos in (3, 6):
         add_rectangle(ax, xpos, orange, height=-0.3, ypos=2)
 
@@ -156,8 +150,6 @@ def plot_stopD(ax: Axes):
 
     for xpos in (-0, 5):
         add_rectangle(ax, xpos, orange, height=-0.3, ypos=1)
-    # for xpos in (9,):
-    #     add_rectangle(ax, xpos, grey, height=-0.3, ypos=1)
 
     ax.text(-12.2, 1, "Stop D", ha="right", va="center", color=grey)
 
@@ -170,10 +162,11 @@ def plot_stopD(ax: Axes):
 
 
 def main():
-    plt.rcParams["figure.figsize"] = 130 / ap.MM_PER_INCH, 5
+    plt.rcParams["figure.figsize"] = 130 / MM_PER_INCH, 5
     plt.rcParams["font.family"] = "arial"
 
     ax = plt.subplot(111)
+    plt.gcf().set_layout_engine(mplu.FixedLayoutEngine(margin_pads_pts=0))
     ax.set_axis_off()
 
     ax.set_box_aspect(1.0 / 1.5)
@@ -187,9 +180,8 @@ def main():
     plot_stopC(ax)
     plot_stopD(ax)
 
-    ap.make_me_nice(margin_pad_pts=0)
-
-    ap.savefig(ftype=("pdf", "svg"), transparent=True)
+    plt.savefig("grouping.pdf", transparent=True)
+    plt.savefig("grouping.svg", transparent=True)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,7 @@
-import atompy as ap
 import numpy as np
-from numpy.typing import NDArray, ArrayLike
+import mplutils as mplu
+from numpy.typing import NDArray
 import matplotlib.pyplot as plt
-from matplotlib.axes import Axes
 from matplotlib.ticker import MultipleLocator
 
 from typing import Final
@@ -27,7 +26,10 @@ def plot():
     plt.rcParams["axes.spines.right"] = True
     plt.rcParams["font.size"] = 9.0
 
-    fig, axs = plt.subplots(nrows=1, ncols=4)
+    layout_engine = mplu.FixedLayoutEngine(
+        margin_pads_pts=(25, 5, 5, 5), col_pads_ignore_labels=True, col_pads_pts=0
+    )
+    fig, axs = plt.subplots(nrows=1, ncols=4, layout=layout_engine)
 
     fig.suptitle("xTDC4 – Cable Delay Measurements")
 
@@ -47,7 +49,7 @@ def plot():
 
     for ax in axs:
         ax.set_ylim(-1, axs[3].get_ylim()[1])
-        ap.set_axes_size(1.0, 1.0 * 3, ax)
+        mplu.set_axes_size(1.0, aspect=3, ax=ax)
         ax.xaxis.set_major_locator(MultipleLocator(50))
 
     for ax in axs[1:]:
@@ -57,14 +59,8 @@ def plot():
     axs[2].set_xlabel("Delay (ps)")
     axs[2].xaxis.set_label_coords(0, -0.055)
 
-    ap.make_me_nice(
-        fix_figwidth=False,
-        margin_pad_pts=(5, 5, 25, 5),
-        col_pad_ignores_labels=True,
-        col_pad_pts=0,
-    )
-
-    ap.savefig("*", ftype=("pdf", "svg"))
+    fig.savefig("cable_delay_hist.pdf")
+    fig.savefig("cable_delay_hist.svg")
 
     plt.close()
 
