@@ -106,7 +106,7 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.5-dev – TBD
+2.0.5 – 2026-03-05
     - Added link to
       `application note <https://docs.cronologic.de/app_notes/tdc_errors`__
       discussing TDC errors
