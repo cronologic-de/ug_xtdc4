@@ -106,6 +106,11 @@ Driver & Applications
 
 User Guide
 ==========
+2.0.5-dev – TBD
+    - Added link to
+      `application note <https://docs.cronologic.de/app_notes/tdc_errors`__
+      discussing TDC errors
+
 2.0.4 – 2026-01-29
     - Corrected utilized PCIe generation
 

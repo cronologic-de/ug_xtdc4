@@ -87,7 +87,9 @@ Cable Delay Test
 :numref:`fig cable delay` shows example histograms resulting from a cable
 delay test, in which a constant delay is measured multiple times.
 From these histograms it is apparent that the largest contribution to the timing error
-is due to the quantization into 13 ps large bins.
+is due to the quantization into 13 ps large bins
+(see our `application note <https://docs.cronologic.de/app_notes/tdc_errors>`__ on
+the topic).
 
 .. figure:: _figures/cable_delay_hist.*
     :name: fig cable delay
