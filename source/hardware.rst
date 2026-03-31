@@ -97,8 +97,20 @@ connector J12 is reserved for future use.
         "31, 32", "reserved/NC"
         "33, 34", "GND"
 
+.. raw:: latex
+
+    \clearpage
+
+.. _sec led:
+
 Status LEDs of the PCIe boards
 ==============================
+
+.. note::
+
+    This section refers to the status LEDs of the PCIe board, not the LEDs of the
+    TBT variant (see
+    `here <https://docs.cronologic.de/desktopsolutions/hardware.html#leds>`__).
 
 Three status LEDs are present on the board, as seen in :numref:`fig schematic`.
 
