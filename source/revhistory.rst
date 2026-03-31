@@ -106,7 +106,7 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.6-dev – TBD
+2.0.6 – 2026-03-31
     - Updated :ref:`sec led`
 
 2.0.5 – 2026-03-05
