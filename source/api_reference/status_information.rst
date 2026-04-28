@@ -160,10 +160,12 @@ its scope and the computational requirements to query the information from the b
     Valid ``flags`` are:
 
     .. c:macro:: CRONO_PCIE_CORRECTABLE_FLAG
+        :no-contents-entry:
 
         Clear correctable PCIe errors.
 
     .. c:macro:: CRONO_PCIE_UNCORRECTABLE_FLAG
+        :no-contents-entry:
 
         Clear uncorrectable PCIe errors.
 
