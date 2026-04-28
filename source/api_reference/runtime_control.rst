@@ -26,6 +26,14 @@ guaranteed to be thread safe.
 
     Start data acquisition.
 
+    .. note::
+
+        :c:func:`!xtdc4_start_capture` will reset the memory buffer.
+
+        If you wish to stop recording data and resume later without clearing the
+        buffer, use :c:func:`xtdc4_pause_capture` and
+        :c:func:`xtdc4_continue_capture`.
+
     :param device: Pointer to an xTDC4 device.
     :returns: Status code:
         :c:macro:`XTDC4_OK`,
