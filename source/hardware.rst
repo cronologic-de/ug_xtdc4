@@ -122,3 +122,31 @@ Three status LEDs are present on the board, as seen in :numref:`fig schematic`.
   was detected and red when groups are missing.
 
 
+.. _sec memory management:
+
+Memory Management
+=================
+
+The xTDC4 has internal FIFOs (first-in, first-out) that buffer data during
+acquisition.
+
+The data is streamed from the FIFO to the
+host PC and stored in the *host buffer*. Data will only be overwritten in the
+host buffer if it has been *acknowledged*.
+
+The host buffer is managed by the DMA (direct memory access) driver. The DMA driver
+can only ever write to the host buffer if enough memory is free. That means, new
+packets will never overwrite old packets unless they have been acknowledged.
+
+If the host buffer is full, data may be lost. If this occurred, the corresponding
+packets will have the
+:c:macro:`XTDC4_PACKET_FLAG_HOST_BUFFER_FULL<crono_packet.flags.XTDC4_PACKET_FLAG_HOST_BUFFER_FULL>`
+bit of :c:member:`crono_packet.flags` will be set. This may result in lost packets.
+
+If the hit rate is too high, the internal FIFOs may fill up. If this is the case,
+the affected packets will have the
+:c:macro:`XTDC4_PACKET_FLAG_DMA_FIFO_FULL<crono_packet.flags.XTDC4_PACKET_FLAG_DMA_FIFO_FULL>`
+bit of :c:member:`crono_packet.flags` will be set. This may result in lost packets.
+However, only if the 
+:c:macro:`XTDC4_PACKET_FLAG_SHORTENED<crono_packet.flags.XTDC4_PACKET_FLAG_SHORTENED>`
+bit of :c:member:`crono_packet.flags` is set, packets were actually missed.
