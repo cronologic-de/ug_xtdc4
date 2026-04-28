@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 2
+
 ===================
 Constants and Types
 ===================
