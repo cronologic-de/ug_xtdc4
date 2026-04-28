@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec configuration:
 
 =============
@@ -37,8 +39,10 @@ or in Section :ref:`sec code example`.
     if (status != XTDC4_OK) { /* handle error */ }
 
 
-xtdc4_configure
-=====================
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_configure}
 
 .. c:function:: int xtdc4_configure(\
     xtdc4_device *device,\
@@ -55,8 +59,13 @@ xtdc4_configure
         :c:macro:`XTDC4_INVALID_CONFIG_PARAMETERS`.
 
 
-xtdc4_get_default_configuration
-=====================================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_default\_configuration}
 
 .. c:function:: int xtdc4_get_default_configuration(\
     xtdc4_device *device,\
@@ -72,8 +81,13 @@ xtdc4_get_default_configuration
         :c:macro:`XTDC4_CRONO_INVALID_ARGUMENTS`.
 
 
-xtdc4_get_current_configuration
-=====================================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_current\_configuration}
 
 .. c:function:: int xtdc4_get_current_configuration(\
     xtdc4_device *device,\
@@ -88,25 +102,45 @@ xtdc4_get_current_configuration
     :return: Status code: :c:macro:`XTDC4_OK`, or
         :c:macro:`XTDC4_INVALID_DEVICE`.
 
-xtdc4_configuration
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_configuration}
 
 .. include:: structs/xtdc4_configuration.rst
 
 
-xtdc4_trigger
-===================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_trigger}
 
 .. include:: structs/xtdc4_trigger.rst
 
 
-xtdc4_tiger_block
-=======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_tiger\_block}
 
 .. include:: structs/xtdc4_tiger_block.rst
 
 
-xtdc4_channel
-===================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_channel}
 
 .. include:: structs/xtdc4_channel.rst

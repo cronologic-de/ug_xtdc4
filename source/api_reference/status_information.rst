@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 ==================
 Status Information
 ==================
@@ -10,8 +12,12 @@ The driver provides functions to retrieve detailed information on the board type
 its configuration, settings, and state. The information is split according to
 its scope and the computational requirements to query the information from the board.
 
-xtdc4_get_device_type
-===========================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_device\_type}
 
 .. c:function:: int xtdc4_get_device_type(xtdc4_device *device)
 
@@ -20,8 +26,13 @@ xtdc4_get_device_type
     :param device: Pointer to an xTDC4 device.
     :return: :c:macro:`CRONO_DEVICE_XTDC4`
 
-xtdc4_get_last_error_message
-==================================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_last\_error\_message}
 
 .. c:function:: const char* xtdc4_get_last_error_message(\
     xtdc4_device *device)
@@ -31,8 +42,13 @@ xtdc4_get_last_error_message
     :param device: Pointer to an xTDC4 device.
     :return: The error message.
 
-xtdc4_get_fast_info
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_fast\_info}
 
 .. c:function:: int xtdc4_get_fast_info(\
     xtdc4_device *device,\
@@ -50,8 +66,13 @@ xtdc4_get_fast_info
         :c:macro:`XTDC4_CRONO_INVALID_ARGUMENTS`, or
         ``-1``.
 
-xtdc4_get_param_info
-==========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_param\_info}
 
 .. c:function:: int xtdc4_get_param_info(\
     xtdc4_device *device,\
@@ -70,8 +91,18 @@ xtdc4_get_param_info
         :c:macro:`XTDC4_WRONG_STATE`,
 
 
-xtdc4_get_static_info
-===========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_static\_info}
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_param\_info}
 
 .. c:function:: int xtdc4_get_static_info(\
     xtdc4_device *device,\
@@ -88,8 +119,13 @@ xtdc4_get_static_info
         :c:macro:`XTDC4_CRONO_INVALID_ARGUMENTS`.
 
 
-xtdc4_get_pcie_info
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_pcie\_info}
     
 .. c:function:: int xtdc4_get_pcie_info(\
     xtdc4_device *device,\
@@ -105,8 +141,13 @@ xtdc4_get_pcie_info
         :c:macro:`XTDC4_INVALID_DEVICE`, or
         :c:macro:`XTDC4_HARDWARE_FAILURE`.
 
-xtdc4_clear_pcie_errors
-=============================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_clear\_pcie\_errors}
 
 .. c:function:: int xtdc4_clear_pcie_errors(\
     xtdc4_device *device,\
@@ -132,22 +173,42 @@ xtdc4_clear_pcie_errors
         :c:macro:`XTDC4_OK`, or
         :c:macro:`XTDC4_INVALID_DEVICE`.
 
-xtdc4_fast_info
-=====================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_fast\_info}
 
 .. include:: structs/xtdc4_fast_info.rst
 
-xtdc4_param_info
-======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_param\_info}
 
 .. include:: structs/xtdc4_param_info.rst
     
-xtdc4_static_info
-=======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_static\_info}
 
 .. include:: structs/xtdc4_static_info.rst
 
-crono_pcie_info
-===============
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_pcie\_info}
 
 .. include:: structs/crono_pcie_info.rst

@@ -6,8 +6,13 @@
 Driver Information
 ==================
 
-xtdc4_get_driver_revision
-===============================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_driver\_revision}
 
 .. c:function:: int xtdc4_get_driver_revision()
 
@@ -19,8 +24,13 @@ xtdc4_get_driver_revision
              :c:member:`xtdc4_static_info.driver_revision`.
 
 
-xtdc4_get_driver_revision_str
-===================================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_driver\_revision\_str}
 
 .. c:function:: const char* xtdc4_get_driver_revision_str()
 
@@ -31,8 +41,13 @@ xtdc4_get_driver_revision_str
     :return: The driver version including the SVN build revision as a string.
 
 
-xtdc4_count_devices
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_count\_devices}
 
 .. c:function:: int xtdc4_count_devices(int *error_code, char **error_message)
 

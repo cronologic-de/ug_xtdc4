@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec readout:
 
 ============
@@ -64,8 +66,12 @@ or in Section :ref:`sec code example`.
 
 
 
-xtdc4_read
-================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_read}
 
 .. c:function:: int xtdc4_read(\
     xtdc4_device *device,\
@@ -90,8 +96,13 @@ xtdc4_read
 
 
 
-xtdc4_acknowledge
-=================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_acknowledge}
 
 .. c:function:: int xtdc4_acknowledge(\
     xtdc4_device *device,\
@@ -127,8 +138,13 @@ xtdc4_acknowledge
 
 
 
-crono_next_packet
-=================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_next\_packet}
 
 .. c:macro:: crono_next_packet(current_packet)
 
@@ -142,8 +158,13 @@ crono_next_packet
     :return: Pointer to the next packet.
 
 
-xtdc4_read_in
-===================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_read\_in}
 
 .. c:struct:: xtdc4_read_in
 
@@ -158,8 +179,13 @@ xtdc4_read_in
         by the user.
 
 
-xtdc4_read_out
-====================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_read\_out}
 
 .. c:struct:: xtdc4_read_out
 

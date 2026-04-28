@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec initialization:
 
 ==============
@@ -42,8 +44,12 @@ or in Section :ref:`sec code example`.
 
 
 
-xtdc4_get_default_init_parameters
-=================================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_get\_default\_init\_parameters}
 
 .. c:function:: int xtdc4_get_default_init_parameters(\
     xtdc4_init_parameters *init)
@@ -60,8 +66,13 @@ xtdc4_get_default_init_parameters
         :c:macro:`XTDC4_OK` or
         :c:macro:`XTDC4_CRONO_INVALID_ARGUMENTS`.
 
-xtdc4_init
-==========
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_init}
 
 .. c:function:: xtdc4_device xtdc4_init(\
     xtdc4_init_parameters *params,\
@@ -93,8 +104,13 @@ xtdc4_init
         :c:member:`params.card_index <xtdc4_init_parameters.card_index>`.
 
 
-xtdc4_close
-===========
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_close}
 
 .. c:function:: int xtdc4_close(xtdc4_device *device)
 
@@ -109,13 +125,24 @@ xtdc4_close
         :c:macro:`XTDC4_CRONO_INTERNAL_ERROR`.
 
 
-xtdc4_init_parameters
-=====================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_init\_parameters}
 
 .. include:: structs/xtdc4_init_parameters.rst
 
-xtdc4_device
-============
+
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_device}
 
 .. c:struct:: xtdc4_device
 

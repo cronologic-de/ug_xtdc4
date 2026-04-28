@@ -2,7 +2,10 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec data format:
+
 
 ==================
 Output Data Format
@@ -57,8 +60,11 @@ or in Section :ref:`sec code example`.
     }
 
 
-crono_packet
-============
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_packet}
 
 .. c:struct:: crono_packet
 

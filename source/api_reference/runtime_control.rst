@@ -14,8 +14,13 @@ the behavior of it.
 These functions return quickly with very little overhead. However, they are not
 guaranteed to be thread safe. 
 
-xtdc4_start_capture
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_start\_capture}
 
 .. c:function:: int xtdc4_start_capture(xtdc4_device *device)
 
@@ -30,8 +35,13 @@ xtdc4_start_capture
         :c:macro:`XTDC4_WRONG_STATE`.
 
 
-xtdc4_pause_capture
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_pause\_capture}
 
 .. c:function:: int xtdc4_pause_capture(xtdc4_device *device)
 
@@ -49,8 +59,13 @@ xtdc4_pause_capture
         :c:macro:`XTDC4_WRONG_STATE`.
 
 
-xtdc4_continue_capture
-============================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_continue\_capture}
 
 .. c:function:: int xtdc4_continue_capture(xtdc4_device *device)
 
@@ -68,8 +83,13 @@ xtdc4_continue_capture
         :c:macro:`XTDC4_WRONG_STATE`.
 
 
-xtdc4_stop_capture
-=========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_stop\_capture}
 
 .. c:function:: int xtdc4_stop_capture(xtdc4_device *device)
 
@@ -81,8 +101,13 @@ xtdc4_stop_capture
         :c:macro:`XTDC4_INVALID_DEVICE`.
 
 
-xtdc4_start_tiger
-=======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_start\_tiger}
 
 .. c:function:: int xtdc4_start_tiger(xtdc4_device *device)
 
@@ -97,8 +122,13 @@ xtdc4_start_tiger
         :c:macro:`XTDC4_WRONG_STATE`.
 
 
-xtdc4_stop_tiger
-=======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{xtdc4\_stop\_tiger}
 
 .. c:function:: int xtdc4_stop_tiger(xtdc4_device *device)
 
