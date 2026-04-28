@@ -106,6 +106,10 @@ Driver & Applications
 
 User Guide
 ==========
+2.0.7 – TBD
+    - Improved :c:func:`xtdc4_start_capture` documentation
+    - Updated User Guide layout
+
 2.0.6 – 2026-03-31
     - Updated :ref:`sec led`
 
