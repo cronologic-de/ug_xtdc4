@@ -166,10 +166,9 @@ def main():
     plt.rcParams["font.family"] = "arial"
 
     ax = plt.subplot(111)
-    plt.gcf().set_layout_engine(mplu.FixedLayoutEngine(margin_pads_pts=0))
+    plt.gcf().set_layout_engine(mplu.FixedLayoutEngine(margin_pads_pts=0.4))
+    mplu.set_axes_size(130.0, 2 * 130.0 / 3, unit="mm")
     ax.set_axis_off()
-
-    ax.set_box_aspect(1.0 / 1.5)
 
     ax.set_xlim(-12, 12)
     ax.set_ylim(0.6, 5.7)
