@@ -11,6 +11,7 @@ xTDC4 User Guide
     \phantomsection
     \addcontentsline{toc}{chapter}{Introduction}
     \chapter*{Introduction}
+    \markboth{Introduction}{}
 
 
 The xTDC4 is a *common-start* high resolution time-to-digital converter.

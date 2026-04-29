@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[2022-06-01]
-\ProvidesPackage{cronologicug}[2026-04-28]
+\ProvidesPackage{cronologicug}[2026-04-29]
 \author{cronologic GmbH \& Co KG}
 
 \RequirePackage{iftex}
@@ -27,6 +27,7 @@
   framelinewidth.store = \@crono@framelinewidth,
   headsep.store = \@crono@headsep,
   footskip.store = \@crono@footskip,
+  webpage.store = \@crono@webpage,
 }
 
 \SetKeys{
@@ -300,12 +301,19 @@
   \fancyhead[R]{{\footnotesize\color{cronogrey}\nouppercase{\rightmark}}}
   \fancyfoot[R]{{\color{cronogrey}}}
   \fancyfoot[L]{{\color{cronogrey}\llap{\hfill\bfseries\thepage\hspace*{10pt}}\href{https://www.cronologic.de}{\footnotesize\textbf{cronologic} GmbH \& Co. KG}}}
-  \fancyfoot[R]{{\footnotesize\color{cronogrey}\cronotitle}}
+  \fancyfoot[R]{{\href{\@crono@webpage}{\footnotesize\color{cronogrey}\cronotitle}}}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
 }
 \setlength{\headheight}{14.5pt}
 \pagestyle{normal}
+
+% Remove "Contents" from header
+\renewcommand{\tableofcontents}{%
+  \chapter*{\contentsname}%
+  \@starttoc{toc}%
+  \markboth{}{}%
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
