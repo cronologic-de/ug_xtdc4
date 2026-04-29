@@ -5,9 +5,20 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import tomllib
+import pathlib
 
-with open("version.txt") as f:
-    version = f.read()
+
+def get_version():
+    pyproject = pathlib.Path(__file__).parents[1] / "pyproject.toml"
+    if pyproject.exists():
+        with pyproject.open("rb") as f:
+            data = tomllib.load(f)
+        return data.get("project", {}).get("version")
+    return "0.0.0"
+
+
+version = get_version()
 
 project = "xTDC4 User Guide"
 copyright = "2025, cronologic GmbH & Co. KG"

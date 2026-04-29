@@ -1,0 +1,17 @@
+[project]
+name = "ug_xtdc4"
+version = "2.0.7-dev"
+requires-python = ">=3.11"
+dependencies = [
+    "furo>=2025.12.19",
+    "sphinx",
+]
+
+[dependency-groups]
+dev = [
+    "mplutils",
+]
+
+[tool.uv.sources]
+mplutils = { git = "https://github.com/frekm/mpl-utils.git", rev = "v0.5.1" }
+
