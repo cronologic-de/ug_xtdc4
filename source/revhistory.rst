@@ -106,7 +106,7 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.8 – TBD
+2.0.8 – 2026-05-19
     - Updated :ref:`sec tdc characteristics`
 
 2.0.7 – 2026-04-29
