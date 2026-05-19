@@ -63,4 +63,4 @@ link to [this repository](https://github.com/cronologic-de/ug_xtdc4) or the
 contribute to this repository, you transfer non-exclusive but unlimited rights to your
 edit to cronologic GmbH & Co. KG.
 
-The file [extraplaceins.sty](extraplaceins.sty) is in the public domain.
+The file [extraplaceins.sty](source/extraplaceins.sty) is in the public domain.
