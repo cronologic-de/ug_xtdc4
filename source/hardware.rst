@@ -140,13 +140,13 @@ packets will never overwrite old packets unless they have been acknowledged.
 
 If the host buffer is full, data may be lost. If this occurred, the corresponding
 packets will have the
-:c:macro:`XTDC4_PACKET_FLAG_HOST_BUFFER_FULL<crono_packet.flags.XTDC4_PACKET_FLAG_HOST_BUFFER_FULL>`
-bit of :c:member:`crono_packet.flags` will be set. This may result in lost packets.
+:c:macro:`~crono_packet.flags.XTDC4_PACKET_FLAG_HOST_BUFFER_FULL`
+bit of :c:member:`crono_packet.flags` set. This *may* result in lost packets.
 
 If the hit rate is too high, the internal FIFOs may fill up. If this is the case,
 the affected packets will have the
-:c:macro:`XTDC4_PACKET_FLAG_DMA_FIFO_FULL<crono_packet.flags.XTDC4_PACKET_FLAG_DMA_FIFO_FULL>`
-bit of :c:member:`crono_packet.flags` will be set. This may result in lost packets.
+:c:macro:`~crono_packet.flags.XTDC4_PACKET_FLAG_DMA_FIFO_FULL`
+bit of :c:member:`crono_packet.flags` will be set. This *may* result in lost packets.
 However, only if the 
-:c:macro:`XTDC4_PACKET_FLAG_SHORTENED<crono_packet.flags.XTDC4_PACKET_FLAG_SHORTENED>`
+:c:macro:`~crono_packet.flags.XTDC4_PACKET_FLAG_SHORTENED`
 bit of :c:member:`crono_packet.flags` is set, packets were actually missed.
