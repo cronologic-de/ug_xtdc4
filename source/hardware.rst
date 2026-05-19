@@ -130,7 +130,7 @@ Memory Management
 The xTDC4 has internal FIFOs (first-in, first-out) that buffer data during
 acquisition.
 
-The data is streamed from the FIFO to the
+The data is streamed from the internal FIFOs to the
 host PC and stored in the *host buffer*. Data will only be overwritten in the
 host buffer if it has been *acknowledged*.
 
