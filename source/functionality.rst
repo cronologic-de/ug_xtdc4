@@ -107,6 +107,18 @@ for details).
 
 The maximum group range is 218.45 μs without rollover and 13.98 ms with rollover.
 
+.. attention::
+
+    Hits on a Stop channel that are closer than 160 ns to the end of a group will
+    not produce a high-resolution timestamp.
+
+    These hits will be flagged with the
+    :c:macro:`~crono_packet.data.XTDC4_HIT_FLAG_COARSE_TIMESTAMP` flag.
+
+    This problem can be avoided by ensureing that the end of a group is at least
+    160 ns after the expected arrival time of Stop hits.
+
+
 .. _sec auto trigger:
 
 Auto-Triggering Function Generator
