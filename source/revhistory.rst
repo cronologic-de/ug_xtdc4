@@ -106,6 +106,9 @@ Driver & Applications
 
 User Guide
 ==========
+2.0.9 – TBD
+    - Updated documentation for :c:func:`xtdc4_get_param_info`
+
 2.0.8 – 2026-05-19
     - Updated :ref:`sec tdc characteristics`
 

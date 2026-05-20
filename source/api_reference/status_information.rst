@@ -82,7 +82,8 @@ its scope and the computational requirements to query the information from the b
 
     Gets information that changes indirectly due to configuration changes.
 
-    :param device: Pointer to an xTDC4 device.
+    :param device: Pointer to an xTDC4 device. The device has to be
+        :doc:`configured <configuration>`.
     :param info: Pointer to a :c:struct:`xtdc4_param_info` struct that
         will be filled.
     :return: Status codes:
