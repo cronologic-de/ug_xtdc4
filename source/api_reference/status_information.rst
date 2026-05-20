@@ -76,7 +76,7 @@ its scope and the computational requirements to query the information from the b
 
 .. c:function:: int xtdc4_get_param_info(\
     xtdc4_device *device,\
-    xtdc4_fast_info *info)
+    xtdc4_param_info *info)
 
     Obtain information about configuration changes.
 
