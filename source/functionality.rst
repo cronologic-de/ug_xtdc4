@@ -11,7 +11,7 @@ Detection of rising and falling edges of the stop channels A–D can be enabled
 individually.
 Throughout this User Guide, transitions of the input signals are called **hits**.
 
-The timestamps are quantized and are recorded in integer multiples of the 
+The timestamps are quantized and are recorded in integer multiples of the
 data bin size of 5 ns / (3 × 128) ≈ 13.02083 ps.
 
 The standard deviation of the timestamps is approximately 8 ps.
@@ -26,7 +26,7 @@ Handling of Difficult Hits
 To measure all hits with the maximum resolution the hits must fulfill all criteria
 set forth in this document.
 However, the xTDC4 does include mechanisms to provide
-as much information as possible for hits that fall out of these specs. 
+as much information as possible for hits that fall out of these specs.
 
 Problematic hits, as listed below, will be flagged in the output *packets*
 (see :ref:`sec data format`, in particular :c:member:`crono_packet.data`).
@@ -142,7 +142,7 @@ clock cycles with a duration of 4 ns per cycle.
 *M* and *N* are configured with
 :c:member:`xtdc4_configuration.auto_trigger_period` and
 :c:member:`xtdc4_configuration.auto_trigger_random_exponent`,
-respectively. 
+respectively.
 
 The trigger can be used as a source for the TiGer unit [see :ref:`sec tiger`].
 
@@ -176,7 +176,7 @@ connector into an output.
 
 The TiGer is DC coupled to the connector. Connected hardware must not drive any signals
 to connectors that are used as outputs, as doing so could damage both the
-xTDC4 and the external hardware. Pulses that are short enough for the 
+xTDC4 and the external hardware. Pulses that are short enough for the
 AC-coupled inputs are available as input signals to the xTDC4. This can be used to
 measure exact time differences between the generated output signals and input signals
 on other channels.
@@ -195,7 +195,7 @@ Performing a Firmware Update
 .. figure:: _figures/XTDC4_flashtool.png
     :name: fig flashtool
     :width: 60%
-    :alt: Screenshot of the XTDC4's FirmwareGUI 
+    :alt: Screenshot of the XTDC4's FirmwareGUI
 
     Screenshot of the XTDC4's FirmwareGUI.
 
@@ -203,20 +203,20 @@ After installing the xTDC4 device driver, a firmware update tool is available.
 By choosing *FirmwareGUI.exe* a firmware update can be performed
 (the default location is under ``C:\Program Files\cronologic\TimeTagger4\apps\x64\``).
 After invoking the
-application, a window as shown in :numref:`fig flashtool` will appear. 
+application, a window as shown in :numref:`fig flashtool` will appear.
 The tool can be used for updating the firmware and to create a backup of the on-board
-calibration data of the xTDC4 unit. 
+calibration data of the xTDC4 unit.
 
 If several boards are present, the one which is going to be used can be selected in
-the upper left corner of the window. 
+the upper left corner of the window.
 
 When pressing one of the *Backup* buttons, a backup of the firmware or the calibration
-data will be created, respectively. 
+data will be created, respectively.
 
 In order to perform a firmware update, chose the ``.cronorom``-file to be used by
-pressing *Browse*. 
+pressing *Browse*.
 The file contains the firmware data. By pressing *Flash*, the firmware is written
-to the board. 
+to the board.
 
 *Verify* can be used to compare the firmware data stored on the xTDC4 to the one
 provided by a file.
@@ -227,7 +227,7 @@ are installed.
 .. attention::
 
     The new firmware will only be used by the board after a power cycle, i.e.
-    after switching the PC (or Ndigo crate) off and back on. 
+    after switching the PC (or Ndigo crate) off and back on.
 
     A simple reboot is not sufficient. Therefore, the information shown in the
     upper half of the application window does not change right after flashing
@@ -244,27 +244,24 @@ Calibrating the Delay-Line TDC
 .. figure:: _figures/XTDC4_Calibration.png
     :name: fig calibration
     :width: 60%
-    :alt: Screenshot of the XTDC4's Calibration Tool. 
+    :alt: Screenshot of the XTDC4's Calibration Tool.
 
     Screenshot of the XTDC4's Calibration Tool.
 
-After each update of the xTDC4 firmware, the Delay-Line TDC must be calibrated. 
+After each update of the xTDC4 firmware, the Delay-Line TDC must be calibrated.
 
 If you just performed a firmware update, make sure to power-cycle the xTDC4 before
 starting the calibration procedure.
 
 The calibration is done with the tool *XTDC4Calibration.exe*
 (see :ref:`fig calibration`) which is available after
-installing the xTDC4 device driver. 
+installing the xTDC4 device driver.
 
 Connect an external pulse signal to the Start and Stop channel inputs.
 The signal must be low active. The pulse width must be between 10 ns and 200 ns.
-The pulse frequency must not exceed 1 MHz. 
+The pulse frequency must not exceed 1 MHz.
 
 Use *Calibrate* to start the calibration procedure.
 Follow the on-screen instructions to gather calibration data on all channels.
 When all channels are calibrated use *Write* to permanently store the calibration
 data in the xTDC4's on-board flash.
-
-
-
