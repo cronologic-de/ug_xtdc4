@@ -67,3 +67,14 @@
         The range is 0 ≤ :c:member:`start` ≤ :c:member:`stop` < 2\ :sup:`30`.
 
         See also :ref:`sec grouping`.
+
+        .. attention::
+
+            This value should correspond to times that are at least 160 ns larger
+            than the longest expected arrival times of your stop signal.
+
+            This is because hits that are closer than 160 ns to the end of a group will
+            not produce a high-resolution timestamp.
+
+            These hits will be flagged with the
+            :c:macro:`~crono_packet.data.XTDC4_HIT_FLAG_COARSE_TIMESTAMP` flag.

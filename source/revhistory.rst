@@ -108,7 +108,7 @@ User Guide
 ==========
 2.0.9 – TBD
     - Updated documentation for :c:func:`xtdc4_get_param_info`
-    - Updated :ref:`sec grouping`
+    - Documented minimal necessary gap between Stop hits and the end of a group
 
 2.0.8 – 2026-05-19
     - Updated :ref:`sec tdc characteristics`
