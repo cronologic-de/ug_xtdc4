@@ -54,6 +54,15 @@ Gen 2
 
 Driver & Applications
 =====================
+
+1.13.0 – 2026-05-27
+    - Updated kernel driver with IOMMU support, enabling handling of logical
+      addresses for improved compatibility with modern system arcitectures and
+      memory management environments
+
+1.12.4 – 2025-12-15
+    - Fixed a kernel driver bug that may cause a bluescreen
+
 1.12.1 – 2025-07-17
     - Added support for kernel mode driver 1.5.2
     - Improved error handling
@@ -106,9 +115,10 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.9 – TBD
+2.0.9 – 2026-05-27
     - Updated documentation for :c:func:`xtdc4_get_param_info`
     - Documented minimal necessary gap between Stop hits and the end of a group
+    - Updated driver revisions
 
 2.0.8 – 2026-05-19
     - Updated :ref:`sec tdc characteristics`
