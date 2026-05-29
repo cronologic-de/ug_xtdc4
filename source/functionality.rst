@@ -137,7 +137,7 @@ The period is
 
     T = M + [1 \dots 2^N] - 1
 
-clock cycles with a duration of 4 ns per cycle.
+clock cycles with a duration of (150 MHz)\ :sup:`–1` ≈ 6.67 ns per cycle.
 
 *M* and *N* are configured with
 :c:member:`xtdc4_configuration.auto_trigger_period` and

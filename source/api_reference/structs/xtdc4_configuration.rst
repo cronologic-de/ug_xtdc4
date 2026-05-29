@@ -199,7 +199,7 @@
         with 6 ≤ *M* \< 2\ :sup:`32` and 0 ≤ *N* < 32.
 
         *M* and *N* are given in units of
-        :c:member:`xtdc4_static_info.auto_trigger_ref_clock`.
+        (:c:member:`xtdc4_static_info.auto_trigger_ref_clock`)\ :sup:`–1`.
 
     .. note::
 
