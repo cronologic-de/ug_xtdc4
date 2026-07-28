@@ -117,6 +117,7 @@ User Guide
 ==========
 2.0.10 – TBD
     - Fixed units for auto trigger period
+    - Added Δt\ :sub:`Pulse` and N\ :sub:`Multihit` to :ref:`sec tdc characteristics`
 
 2.0.9 – 2026-05-27
     - Updated documentation for :c:func:`xtdc4_get_param_info`
