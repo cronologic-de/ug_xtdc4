@@ -97,6 +97,7 @@ html_css_files = ["custom.css"]
 
 # Latex output
 latex_engine = "lualatex"
+latex_table_style = ["booktabs"]
 latex_xindy_use = False
 latex_elements = {
     "papersize": "a4paper",
