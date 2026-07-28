@@ -45,6 +45,8 @@ jobs:
         root_file: xtdc4userguide.tex
         latexmk_use_lualatex: true
         working_directory: build/latex
+      env:
+        stack_size: 50000
 
     - name: Upload log if latexmk fails
       if: ${{ failure() }}
