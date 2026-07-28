@@ -115,7 +115,7 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.10 – TBD
+2.0.10 – 2026-07-28
     - Fixed units for auto trigger period
     - Added Δt\ :sub:`Pulse` and N\ :sub:`Multihit` to :ref:`sec tdc characteristics`
 
