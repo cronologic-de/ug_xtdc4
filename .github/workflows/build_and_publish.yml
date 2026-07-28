@@ -40,7 +40,7 @@ jobs:
         path: build/html
 
     - name: Compile PDF
-      uses: xu-cheng/latex-action@v3
+      uses: xu-cheng/latex-action@v4
       with:
         root_file: xtdc4userguide.tex
         latexmk_use_lualatex: true
