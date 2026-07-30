@@ -10,6 +10,8 @@
     Use :c:member:`xtdc4_channel.rising` to select which edge is measured with
     full resolution.
 
+    Used for :member:`xtdc4_configuration.trigger`.
+
     .. attention::
 
         The edge that is selected for full-resolution measurements

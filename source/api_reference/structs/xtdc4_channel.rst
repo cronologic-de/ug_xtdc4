@@ -1,5 +1,7 @@
 .. c:struct:: xtdc4_channel
 
+    Used for :member:`xtdc4_configuration.channel`.
+
     .. c:member:: crono_bool_t enabled
 
         Enable the TDC channel.
